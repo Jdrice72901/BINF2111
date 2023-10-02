@@ -1,0 +1,23 @@
+BINF2111 Lab_5 notes 
+
+diff- find differences between 2 files 
+
+if-- conditional statement, compares 2 data points
+alwasy returns true or false  
+&& -- both true 
+
+|| -- if 1 or 2 is true 
+
+else -- do something if the statement is false 
+
+elif -- if 2 is true when 1 is false 
+ 
+for-- loop statement to look through a group of elements 
+
+diff options 
+-i -- case insensitive, ignore capitalization 
+usage 
+< --lines from first file 
+> --lines are from second file 
+	
+

@@ -1,0 +1,122 @@
+BINF2111 notes 
+grep = Global search, Regular expression, Print
+
+egrep-- grep with extensions 
+
+^A-- begening of line 
+$A-- end of line 
+
+grep -n "AT" example.fasta 
+--prints lines containing 'AT' with line number
+
+grep -o "AT" example.fasta | wc -l
+-- counts all "AT" in file 
+
+EX: echo "ATATCCC" | grep -o "AT"|wc -l
+
+
+
+SED (Stream editor)
+Written in C
+Used for substitution 
+S-substitution 
+g- global 
+
+ex: sed 's/World/There/g' file.txt
+Replaces "World" with "There" in file.txt
+
+sed 's/[a-z]/\U&/g' kite_data.txt
+Makes everything Uppercase
+
+sed 's/[A-Z]/\L&/g' kite_data.txt
+Makes everything uppercase lowercase 
+
+sed -i '/Three/d' file.txt
+Deletes everythin gin the line containing "Three"
+
+Bonus question***
+
+Delete all empty lines with grep and AWK
+grep -v-e '^$' file
+awk '!/^$/' file
+Delete all white space With Grep and AWK
+grep -v-e '^[[:space:]]*$' file
+sed '/^[[:space:]]*$/d'
+awk 'NF > 0' file
+
+CSV- COllumn based
+TSV- Tab based 
+
+Convert CSV to tsv 
+sed 's/,/\t/g' name_game.csv >name_game.tsv
+
+convert spaces to commas 
+
+sed 's/"SPACE"/,/g'
+
+Space to tab
+sed 's/ /\t/g'
+
+
+CUT
+
+--complement Acts like -v, does the opposite of command 
+
+
+
+echo $PATH -  lists all paths of excutable files.
+
+PWD - working directory
+
+ls- lists all directories
+
+
+egrep -v '^$' file.tsv
+DELETES all empty lines
+
+
+wget [options] file.txt
+-V-version
+-h help
+-b background
+
+downloads file to current working directory
+
+zip example.zip name_game.tsv
+creates example.zip file and zips up name_game.tsv in file 
+vim example.zip
+cntrl z to exit 
+
+zip'*.zip'
+gzip'*.gz'
+binzip2'*.bz2'
+unzip
+gunzip
+binzip2
+
+tr[option] set1 [set2]
+-c complements characters in string
+-d delete characters from first set 
+-s replaces repeated characters
+-t truncates set1
+ex: cat empty_lines.txt | tr -d [:space:]
+deletes all  empty space
+
+printf
+/n- new line
+/t- horizontal tab
+/v vertical tab
+
+
+
+
+
+
+
+
+
+
+
+
+
+

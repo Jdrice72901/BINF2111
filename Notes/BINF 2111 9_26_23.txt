@@ -1,0 +1,121 @@
+BINF 2111 9_26_23
+
+BASH for loops
+while loops 
+Bash functions 
+
+
+Perl- similar to grep, sed, and awk
+in line regular expressions 
+
+-e, single line expression
+-n, excecute on each line 
+-p, each line and print result
+-F, split soutce tect useing following pattern
+-a, part of -F
+-I, print everyting with a seperator
+EX: grep like 
+perl -ne 'print if /chr1_geneA/' example2.fasta | more
+prints the line chr1_geneA
+
+Array variables in Bash 
+
+no maximum limit to size
+first index is 0 
+
+bash EX:
+
+arr=("apple""banana""cherry")
+
+or 
+
+arr[0]="apple"
+arr[1]="banana"
+arr[2]="cherry"
+
+using for loop to iterate through array 
+
+for element in "${arr[@]}"
+do 
+	echo $element
+done
+
+how about in c style 
+
+for ((i=0; i<"${#arr[@]}"; i++;))
+do
+	echo ${arr[$i]}
+done
+
+iterate through indicies 
+
+for index in "${!arr[@]}"
+do 
+	echo "$index -> ${arr[$index]}"
+done
+
+you can change the index also while creating the array 
+
+arr=([2]="apple" [4]="banana" [9]="cherry")
+
+bash script while loop
+
+#!/bin/bash
+
+x=1
+
+while [ $x -le 5 ]
+do
+        echo "Welcome $x times"
+        x=$(( $x + 1))
+done
+
+
+reverse of while is until 
+
+until[condition]; 
+do
+	lines of code 
+done 
+
+EX:
+#!/bin/bash
+
+NUM=1
+
+until [ "$NUM" -gt 1000 ];
+do
+        echo $NUM
+        let NUM=NUM*2
+done
+
+
+
+BASH Functions 
+
+Function_name(){
+	command
+}
+
+EX:
+
+#!/bin/bash
+
+print_this(){
+        echo Hello $1
+        return 5
+}
+print_this Mars
+
+print_this Jupiter
+
+echo The previous function has a return value of $?
+
+
+
+BONUS -- write a function that wull return the number of lines it has in it
+
+
+
+
+

@@ -1,0 +1,17 @@
+BINF2111 lab_4 notes 
+
+bash script always end in .sh
+
+Run bash script using 
+
+./file.sh
+or 
+bash file.sh
+
+Variable naming conventions 
+shoudlnt not start with numbers
+should not ocntain ". - :"
+
+Refrence variable with $
+
+array ranges 

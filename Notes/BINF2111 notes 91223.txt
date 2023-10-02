@@ -1,0 +1,142 @@
+BINF2111 notes 9/12/23
+
+grep -oE "chi$(printf'\t')bill" doppenganger_names.txt
+
+prints: chi	bill
+says to look for chi, then at the end of chi use print f to add a tab, and that should be near bill. 
+
+Bourne Shell (sh)
+
+shell line interpreter
+default shell for version 7 Unix
+
+Variants 
+C Shell: Bill Joy(author)nobody uses
+
+Korn Shell(David Korn)
+
+Z shell
+Schilly Bourne shell
+rd: (Bell labs)
+
+BASH
+unix shell written by brian fox, released in 1989
+default for apple until 2019 and release of macos catalina changed it to zsh
+
+Acronym for Bourne Again Shell
+
+
+creating BASH SCRIPT
+
+printf '#!/bin/bash' > script.sh
+
+printf 'whoami\n' >>script.sh
+
+bash script.sh //runs the bash script
+
+bash 
+MYVAR1="2"
+echo $MYVAR1 output 2
+full_name="Your name"
+echo full_name output Your name
+
+
+variables are place holders that echo reads out for us 
+
+Global variables, available in all shells 
+
+Local variables, available in their shell only 
+
+illegal variable names!!!
+1myvar
+my-var
+my.var
+my:var
+NEVER DO THESE
+
+BONUS
+bash script that states 150kg at 178cm is overweight
+
+count how many times chi is left to bill
+grep -cP "chi\tbill" doppelganger_names.txt
+
+
+
+
+
+THursday notes 
+
+printf '#!/bin/bash\n# THis is my firat comment\n'>script.sh
+
+output :
+
+#!/bin/bash
+# This is my first comment
+
+printf '#!/bin/bash\n \n# THisis my script/n' > script.sh
+always \n the end of a printf command to end the line 
+
+
+
+String Variables
+
+Integers variables
+
+Constant variables- EX: pi 
+
+Array variable- list 
+
+
+Secuence foles are commonly Fasta format representing nucleotide sewuences or amino acid protien as single letter codes.
+
+Nucleotides - A, T, C, G, U
+
+Pairs
+
+A-T double bond
+
+G-C tripple bond 
+
+U-A double bond
+
+varius fasta formats- .fa, .fasta, .ffn, .fna
+
+Best: .fna(fasta nucleotide file -contigs/reads
+
+.ffa-fasta feature nucleotide(nucleotide or protien ORFs)
+
+.fq - fastq fasta data and quality encoded(raw/trip reads)
+
+quality scores run from 0-21, 
+lowest quality =! 
+highest quality = ~
+
+A quality Q 
+using sanger variant to assess reliability of a base call
+Q sanger = -10 -log10p
+UYsing Illumina (solex) genome analyzer earlier used a different mappigng, ancoding the odds p/(1-p) instead of probability of p 
+Q solexa (prior to 1.3v)= -10log10p / 1-p
+
+40 is the highest score for string varaiables - fastq
+
+Phred quality score
+10-Very bad 1 in 10 probability of incorrect base call 90% accuracy 
+40- best currently available 1 in 10,000 99.99% accuracy
+60- best theoretically possible 1 in 1,000,000 99.9999%
+
+Some essential amino acids that the body dosent produce and get through food. 
+
+Amino acid format is .faa 
+always used 
+
+
+array variables in BASH
+
+no max size.
+
+
+
+
+
+
+

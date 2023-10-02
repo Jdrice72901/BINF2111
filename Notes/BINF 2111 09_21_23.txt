@@ -1,0 +1,112 @@
+BINF 2111 09_21_23
+tsv to csv 
+
+sed 's/\t/,/g' file.tsv>file.csv
+
+cat file.tsv | tr -s '\t' ',' >file.csv
+
+
+easy awk way 
+
+awk'{gsub("\t",",");print}file.tsv
+
+
+
+this line gets the line with 3 ATGs 
+gerp '\(.*ATG\)\{3\}' test.fna | more 
+
+
+SAM file- sequence alignment/map file, saves alignment information of short reeds mapped agaisnt refrence sequences
+
+BAM file is the condensed version of SAM file 
+
+
+
+How do i print specific lines with bash 
+
+print line numbers 
+
+cat --number file_name.txt 
+
+how about specific lines?
+for line 1 
+sed -n'1p' file_name.txt
+
+or 
+
+head -1 file_name.txt | tail +1
+
+line 1 and 2 
+
+sed -n '1p;2p' file_name.txt
+
+or 
+
+head -2 file_name.txt | tail +1
+
+
+print line 1 opnly and grab david with color?
+
+cat -n file_name.txt | sed -n "1p' | grep "david" --color 
+
+
+How to print range of lines 
+
+sed -n '3,7p' file_name.txt 
+
+awk 'NR>=3 && NR<+7' file_name.txt
+
+head -7 file_name.txt | tail +3
+
+
+Bash script conditional where if 2 numbers match, the script states numbers match or if it dosent match say they dont.
+
+4 conditionals, equal, not equal, less than or equal, greater than or equal 
+
+#!/bin/bash
+
+num1 = $1
+num2 = $2
+
+if[$num1 -eq $num2]; then
+        echo "the numbers match"
+else
+        echo "the numbers dont match"
+
+if [$num1 != $num2]; then
+        echo "Not equal"
+else
+        echo "Equal"
+
+if [$num1 -le $num2];then
+
+if [$num1 -ge $num2]; then
+
+
+how to read in variables 
+
+#!/bin/bash
+
+echo "enter first numer"
+read var1
+echo $var1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

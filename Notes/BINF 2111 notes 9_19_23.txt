@@ -1,0 +1,52 @@
+BINF 2111 notes 9_19_23
+
+
+FAA file type, anything other than As, Gs, Ts, Cs
+fasta amino acid file 
+
+how to write a bash script to state 150kg at 178cm is overweight 
+
+Var1= Weight 
+
+Var2 = Height 
+
+These are integer variables 
+
+#!/bin/bash
+
+weight = $1
+height =$2
+
+idealweight =$[$height -110]
+if [$weight -le $idealweight ] ; then
+	echo "You should eat a bit more food"
+else
+	echo "You should eat a bit less foor"
+fi
+
+compile with chmod 
+
+
+bash for loops 
+
+  GNU nano 6.2                    classToday.sh                            #!/bin/bash
+
+for i in {1..5}
+do
+        echo "Hello $i times"
+done
+
+output 
+
+Hello 1 times 
+Hello 2 times 
+Hello 3 times 
+Hello 4 times 
+Hello 5 times 
+
+
+
+
+
+
+
