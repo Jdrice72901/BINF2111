@@ -1,0 +1,40 @@
+BINF2111 lab_2
+
+1.grep -c ">" lab2_nucleotide.fasta 
+lab2_nucleotides.fasta has 4 sequences 
+
+grep -c ">" lab2_protein.fasta
+lab2_protien.fasta has 11 sequences
+
+2. sed -i 's/lab 2/Jake/g' lab2file1.txt
+
+3. sed -i '/this/d' lab2file1.txt
+
+4. sed -i 's/[A-Z]/\L&/g' lab2_nucleotide.fasta
+
+5. sed -i 's/[a-z]/\U&/g' lab2file1.txt
+
+6. egrep -o "at|gc" lab2_nucleotide.fasta |wc -l
+there are 98
+
+7. sed '/text$/d' lab2file1.txt
+
+8. grep -c "^M" lab2_protein.fasta
+there are 7 lines starting with "M"
+
+9. egrep -vn "^M|>" lab2_protein.fasta
+
+10. egrep -n "T..A" lab2_protein.fasta
+
+Bonus 1.  awk 'NR==10, NR==15{print $0}' lab2_protein.fasta
+
+Bonus 2. awk '{ if (length($0) > max) max = length($0) } END { print max}' lab2_protein.fasta
+
+73 length 
+
+awk '{ if (length($0) > max_len) {max_len = length($0); longest_line = $0}} END {print longest_line}' lab2_protein.fasta
+
+This prints out the longest line 
+
+Bonus 3. 
+
