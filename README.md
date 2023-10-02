@@ -5,4 +5,4 @@ Jake Rices Repository
 <br />
 I am taking BINF2111 in the fall semester 
 <br />
-I am a Data Science major in my 3th year 
+I am a Data Science major in my 3rd year 
